@@ -22,16 +22,17 @@ function errorCheck (errorInput) {
   }
 };
 
+
 $(document).ready(function() {
   $("form").submit(function(event) {
     $("#list").empty();
     event.preventDefault();
     if (errorCheck($("#number-input").val())) {
-        alert("Enter a number! No negatives please!");
-    } else
-    var pingPong = counter($("#number-input").val());
-    pingPong.forEach(function (value) {
-      $("#list").append("<li>" + value + "</li>");
+      alert("Enter a number! No negatives please!");
+    } else 
+      var pingPong = counter($("#number-input").val());
+      pingPong.forEach(function (value) {
+        $("#list").append("<li>" + value + "</li>");
     });
   });
 });

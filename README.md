@@ -24,7 +24,7 @@ _Input a desired length to count to and certian numbers will be replaced with te
 ## Setup/Installation Requirements
 
 * _Download repository files and open in preferably Google Chrome_
-* _Or just visit the webpage at nigelorion.github.io/ping-pong_
+* _Visit the webpage at [Ping-Pong](https://nigelorion.github.io/ping-pong/)_
 
 
 ## Known Bugs

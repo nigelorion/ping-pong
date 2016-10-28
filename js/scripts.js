@@ -18,8 +18,7 @@ function counter (userInput) {
 function errorCheck (errorInput) {
   var checkInput = parseInt(errorInput);
   if (!checkInput || checkInput < 0 || isNaN(checkInput)){
-    alert("Enter a number! No negatives please!");
-    return false;
+    return true;
   }
 };
 
@@ -27,17 +26,12 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     $("#list").empty();
     event.preventDefault();
-    errorCheck($("#number-input").val());
+    if (errorCheck($("#number-input").val())) {
+        alert("Enter a number! No negatives please!");
+    } else
     var pingPong = counter($("#number-input").val());
     pingPong.forEach(function (value) {
-      $("#list").delay(value*100).append("<li>" + value + "</li>").fadeIn(300);
+      $("#list").append("<li>" + value + "</li>");
     });
   });
 });
-
-
-
-
-
-
-// $("#ping-pong").text(counter($("#number-input").val()));

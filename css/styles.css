@@ -8,13 +8,16 @@
   background-color: transparent;
 }
 #list {
-  display: none;
-  font-size: 22pt;
-  text-align: center;
-  display: inline;
+  font-size: 18pt;
+  list-style: none;
+  padding: 2%;
 }
-/*
+
+#list ul {
+  font-style: italic;
+}
+
 .form-group {
-  margin-left: 30%;
-  margin-right: 30%;
-}*/
+  margin-left: 40%;
+  margin-right: 40%;
+}

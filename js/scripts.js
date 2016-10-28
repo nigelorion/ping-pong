@@ -1,22 +1,45 @@
+// function errorCheck (userinput) {
+//   if (!userInput){
+//   alert("Enter a number!");
+//   return false;
+// }
+// }
+
 
 function counter (userInput) {
   var userInputNum = parseInt(userInput);
   var userArray = [];
   for (var i = 1; i <= userInputNum; i++) {
-    userArray.push(i);
-      for (var i = 0; i <= userArray.length; i++) {
-        if (userArray[i] % 3 == 0) {
-          userArray[i] = "Ping";
-        } else if (userArray[i] % 5 == 0) {
-          userArray[i] = "Pong";
-        } else if (userArray[i] % 15 == 0) {
-          userArray[i] = "Ping-Pong";
-        }
-      }
-  }
-  return userArray;
+    if ([i] % 3 == 0) {
+      userArray.push('Ping')
+    } else if ([i] % 5 == 0) {
+      userArray.push('Pong')
+    } else if ([i] % 15 == 0) {
+      userArray.push('Ping-Pong')
+    } else {
+      userArray.push(i)
+    }
+    console.log(userArray);
+  };
 
 };
+
+
+  //   userArray.push(i);
+  //     for (var i = 0; i <= userArray.length; i++)
+  //     console.log(userArray);{
+  //       if (userArray[i] % 3 == 0) {
+  //         userArray[i] = "Ping";
+  //       } else if (userArray[i] % 5 == 0) {
+  //         userArray[i] = "Pong";
+  //       } else if (userArray[i] % 15 == 0) {
+  //         userArray[i] = "Ping-Pong";
+  //       } else {
+  //
+  //       }
+  //     }
+  // }
+
 
 //
 // function divisibleBy (userArray) {
@@ -35,9 +58,7 @@ function counter (userInput) {
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
-    var userInput = $("#number-input").val();
-    counter(userInput);
-    alert(userInput)
+    counter($("#number-input").val());
   });
 });
 

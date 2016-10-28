@@ -18,13 +18,16 @@ function counter (userInput) {
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
-    $("#ping-pong").text(counter($("#number-input").val()));
-
-    // setInterval(function() {
-    //   i++; if (i <= n) {
-    //     $("#ping-pong").text(counter($("#number-input").val()));(userArray[i-1]);
-    //   }
-    // }, 1000);
-
+    var pingPong = counter($("#number-input").val());
+    pingPong.forEach(function (value) {
+      $("#list").append("<li>" + value + "</li>");
+    });
   });
 });
+
+
+
+
+
+
+// $("#ping-pong").text(counter($("#number-input").val()));

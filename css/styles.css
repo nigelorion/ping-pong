@@ -1,4 +1,13 @@
-#ping-pong {
-  color: green;
-  font-size: 40pt;
+.container {
+  text-align: center;
+}
+
+#list {
+  font-size: 30pt;
+  list-style: none;
+}
+
+.form-group {
+  margin-left: 30%;
+  margin-right: 30%;
 }

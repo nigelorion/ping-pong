@@ -1,13 +1,20 @@
 .container {
   text-align: center;
+  font-family: 'Muli', sans-serif;
+  margin: auto;
 }
 
+.jumbotron {
+  background-color: transparent;
+}
 #list {
-  font-size: 30pt;
-  list-style: none;
+  display: none;
+  font-size: 22pt;
+  text-align: center;
+  display: inline;
 }
-
+/*
 .form-group {
   margin-left: 30%;
   margin-right: 30%;
-}
+}*/

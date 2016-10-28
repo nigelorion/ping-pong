@@ -15,12 +15,22 @@ function counter (userInput) {
   return userArray;
 };
 
+function errorCheck (errorInput) {
+  var checkInput = parseInt(errorInput);
+  if (!checkInput || checkInput < 0 || isNaN(checkInput)){
+    alert("Enter a number! No negatives please!");
+    return false;
+  }
+};
+
 $(document).ready(function() {
   $("form").submit(function(event) {
+    $("#list").empty();
     event.preventDefault();
+    errorCheck($("#number-input").val());
     var pingPong = counter($("#number-input").val());
     pingPong.forEach(function (value) {
-      $("#list").append("<li>" + value + "</li>");
+      $("#list").delay(value*100).append("<li>" + value + "</li>").fadeIn(300);
     });
   });
 });
